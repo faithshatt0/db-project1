@@ -78,6 +78,7 @@ public class OrdIndex implements DBIndex {
             } else if(foundKey) {
                 return mid * -1;
             }
+            // check if last two numbers are less than and greater than the search key
 
             if (index.get(mid).getKey() > key)
                 return binarySearch(left, mid-1, key, blockNum);
